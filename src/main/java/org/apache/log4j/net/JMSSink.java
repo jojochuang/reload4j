@@ -88,7 +88,7 @@ public class JMSSink implements javax.jms.MessageListener {
     try {
       Context ctx = new InitialContext();
       TopicConnectionFactory topicConnectionFactory;
-      topicConnectionFactory = (TopicConnectionFactory) lookup(ctx,
+      topicConnectionFactory = (TopicConnectionFactory) JNDIUtil.lookupObject(ctx,
                                                                tcfBindingName);
 
       TopicConnection topicConnection =
@@ -99,7 +99,7 @@ public class JMSSink implements javax.jms.MessageListener {
       TopicSession topicSession = topicConnection.createTopicSession(false,
                                                        Session.AUTO_ACKNOWLEDGE);
 
-      Topic topic = (Topic)ctx.lookup(topicBindingName);
+      Topic topic = (Topic)JNDIUtil.lookupObject(ctx, topicBindingName);
 
       TopicSubscriber topicSubscriber = topicSession.createSubscriber(topic);
     
@@ -131,16 +131,6 @@ public class JMSSink implements javax.jms.MessageListener {
     } catch(JMSException jmse) {
       logger.error("Exception thrown while processing incoming message.", 
 		   jmse);
-    }
-  }
-
-
-  protected static Object lookup(Context ctx, String name) throws NamingException {
-    try {
-      return ctx.lookup(name);
-    } catch(NameNotFoundException e) {
-      logger.error("Could not find name ["+name+"].");
-      throw e;
     }
   }
 
