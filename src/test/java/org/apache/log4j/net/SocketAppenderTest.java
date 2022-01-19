@@ -22,6 +22,8 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.spi.LoggingEvent;
 import org.apache.log4j.xml.DOMConfigurator;
 
+import static org.apache.log4j.TestConstants.TEST_INPUT_PREFIX;
+
 public class SocketAppenderTest extends TestCase {
 
     /**
@@ -33,8 +35,9 @@ public class SocketAppenderTest extends TestCase {
 
     /* JUnit's setUp and tearDown */
 
-    protected void setUp() {
-        DOMConfigurator.configure("input/xml/SocketAppenderTestConfig.xml");
+	public void setUp() {
+	        DOMConfigurator.configure(TEST_INPUT_PREFIX + "xml/SocketAppenderTestConfig.xml");
+		//DOMConfigurator.configure(TEST_INPUT_PREFIX + "xml/socketAppenderForChainsaw.xml");
 
         logger = Logger.getLogger(SocketAppenderTest.class);
         secondary = (LastOnlyAppender) Logger.getLogger(
