@@ -18,12 +18,12 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>ch.qos.reload4j</groupId>
-  <artifactId>reload4j</artifactId>
+  <groupId>log4j</groupId>
+  <artifactId>log4j</artifactId>
   <packaging>jar</packaging>
-  <name>reload4j</name>
-  <version>1.2.18.4</version>
-  <description>Reload4j revives EOLed log4j 1.x</description> 
+  <name>Apache Log4j</name>
+  <version>1.2.18.4-cloudera1</version>
+  <description>Reload4j revives EOLed log4j 1.x</description>
 
   <url>https://reload4j.qos.ch</url>
   <inceptionYear>1999</inceptionYear>

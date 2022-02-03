@@ -1,6 +1,8 @@
+## What is this?
+This is Cloudera's fork of reload4j, where the only change is to revert
+the artifacts and project id back to log4j:log4j.
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/ch.qos.reload4j/reload4j/badge.svg)](https://maven-badges.herokuapp.com/maven-central/ch.qos.reload4j/reload4j)
-[![CI Status](https://github.com/qos-ch/reload4j/workflows/CI/badge.svg?branch=branch_1.2.18)](https://github.com/qos-ch/reload4j/actions?query=branch%3Abranch_1.2.18)
+The release 1.2.18.4-cloudera1 is based on reload4j 1.2.18.4.
 
 ## What is reload4j?
 
